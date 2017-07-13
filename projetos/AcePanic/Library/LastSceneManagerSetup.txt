@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/AcePanic.unity
+- path: Assets/Scene/titulo.unity
   isLoaded: 1
   isActive: 1

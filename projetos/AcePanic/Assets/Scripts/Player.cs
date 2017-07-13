@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
 
@@ -26,5 +27,12 @@ public class Player : MonoBehaviour {
 		}
 
 		playerRb.velocity = new Vector2 (velocidade,playerRb.velocity.y);
+	}
+
+	void OnCollisionEnter2D(Collision2D elementoColidido){
+		if (elementoColidido.gameObject.CompareTag("espinho")) {
+			SceneManager.LoadScene ("gameover");
+			Debug.Log ("Morreu");
+		}
 	}
 }
