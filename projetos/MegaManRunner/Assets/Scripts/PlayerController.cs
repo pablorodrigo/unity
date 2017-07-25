@@ -37,7 +37,10 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if(Input.GetButtonDown("Jump") && grounded){
+
+
+		//Input.GetButtonDown("Jump")
+		if(Input.GetMouseButtonDown (0) && grounded){
 			
 			playerRigidbody2D.AddForce (new Vector2(0,forceJumb));
 			//jump = true;
@@ -48,8 +51,8 @@ public class PlayerController : MonoBehaviour {
 
 
 		}
-
-		if(Input.GetButtonDown("Slide") && grounded && !slide){
+		//Input.GetButtonDown("Slide")
+		if(Input.GetMouseButtonDown (1) && grounded && !slide){
 			colisor.position = new Vector3 (colisor.position.x,colisor.position.y-0.3f,colisor.position.z);
 			slide = true;
 			timeTemp = 0;
@@ -78,8 +81,8 @@ public class PlayerController : MonoBehaviour {
 
 	void OnTriggerEnter2D(){
 	
-		Debug.Log ("Bateu");
-
+		Application.LoadLevel ("GameOver");
+		//Debug.Log ("Bateu");
 
 	}
 

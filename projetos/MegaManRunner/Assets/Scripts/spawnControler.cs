@@ -7,9 +7,11 @@ public class spawnControler : MonoBehaviour {
 	[SerializeField]private GameObject barreiraPrefab;
 	//intervalo do spawn
 	public float rateSpawn;
-	public float currentTime;
+	private float currentTime;
 	private int posicao;
 	private float y;
+	public float posicaoA;
+	public float posicaoB;
 
 	// Use this for initialization
 	void Start () {
@@ -23,11 +25,11 @@ public class spawnControler : MonoBehaviour {
 			currentTime = 0;
 			posicao = Random.Range (1,100);
 			if (posicao > 50) {
-				y = -0.04f;
-				Debug.Log ("entrou no if");
+				y = posicaoA;
+				//y = -0.04f;
 			}else {
-				Debug.Log ("entrou no else");
-				y = 0.6f;
+				y = posicaoB;
+				//y = 0.6f;
 			}
 
 			GameObject tempPrefab = Instantiate (barreiraPrefab) as GameObject;
