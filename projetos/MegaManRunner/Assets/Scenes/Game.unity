@@ -160,7 +160,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300028, guid: 34cfb0022469bc845abd436d22bdcc56, type: 3}
+  m_Sprite: {fileID: 21300004, guid: 34cfb0022469bc845abd436d22bdcc56, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -399,7 +399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 629b4904b70ac2149a95814de1c6645a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  barreiraPrefab: {fileID: 1749060362414316, guid: 7c797b4a93918bb408802e59fb0540ed,
+  barreiraPrefab: {fileID: 1847866163230990, guid: 70b6342e8c375ee4fb6e81db94e26e3c,
     type: 2}
   rateSpawn: 2
   posicaoA: -0.04
