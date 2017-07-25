@@ -6,10 +6,12 @@ public class moverBarreira : MonoBehaviour {
 
 	public float velocidade;
 	private float x;
+	[SerializeField] GameObject player;
+	private  bool pontuado;
 
 	// Use this for initialization
 	void Start () {
-		
+		player = GameObject.Find ("Player") as GameObject;
 	}
 	
 	// Update is called once per frame
@@ -22,6 +24,11 @@ public class moverBarreira : MonoBehaviour {
 
 		if (x <= -7) {
 			Destroy (transform.gameObject);
+		}
+
+		if(x<player.transform.position.x && !pontuado ){
+			pontuado = true;
+			PlayerController.pontuacao++;
 		}
 
 	}
